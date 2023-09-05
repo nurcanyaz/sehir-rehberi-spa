@@ -1,0 +1,12 @@
+
+::ng-deep .bs-datepicker-body {
+    background-color: transparent !important;
+    color: black;
+  }
+  
+  
+  ::ng-deep .bs-datepicker-body .is-highlighted {
+    background-color: rgb(20, 183, 158);
+    border: 2px solid black; 
+  }
+  

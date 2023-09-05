@@ -1,0 +1,13 @@
+<!-- edit-city.component.html -->
+<div class="edit-city-form">
+  <h2>Şehir Düzenle</h2>
+  <form (ngSubmit)="updateCity()" #editForm="ngForm">
+    <label>Şehir Adı:</label>
+    <input type="text" name="name" [(ngModel)]="editingCity.name" required>
+    <label>Açıklama:</label>
+    <textarea name="description" [(ngModel)]="editingCity.description" required></textarea>
+    <label>Fotoğraf Seçin:</label>
+    <input type="file" (change)="onFileSelected($event)" accept=".jpg,.jpeg,.png">
+    <button type="submit">Kaydet</button>
+  </form>
+</div>

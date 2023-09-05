@@ -1,0 +1,49 @@
+<!--topnavbar-->
+<div class="topnav shadow p-3">
+    <a>Admin Dashboard</a>
+    <span class="menu" (click)="openNav(true)"><i class="bi bi-list"></i></span>
+  </div>
+  <!--topnavbar-->
+  
+  <!-- left side bar-->
+  <div class="sidebar shadow p-2" id="sidebar" [ngStyle]="responsiveMenu">
+    <ul>
+      <li><a routerLink=""><i class="bi bi-speedometer2"></i>Dashboard</a></li>
+      
+      <li>
+        <a routerLink="/cities"><i class="bi bi-app"></i>Cities</a>
+        <ul class="dropdow-container">
+          <li><a routerLink="addcity"><i class="bi bi-plus-lg"></i>New City</a></li>
+      </ul>
+      </li>
+      <li>
+        <a routerLink="/hotels"><i class="bi bi-building"></i>Hotels</a>
+        <ul class="dropdow-container">
+          <li><a routerLink="/addHotel" ><i class="bi bi-plus-lg"></i>New Hotel</a></li>
+      </ul>
+      </li>
+      <li>
+        <a routerLink="/rooms"><i class="bi bi-app"></i>Rooms</a>
+        <ul class="dropdow-container">
+          <li><a href="#"><i class="bi bi-list"></i>Room List</a></li>
+          <li><a href="#"><i class="bi bi-box-arrow-right"></i>Room Type</a></li>
+          <li><a href="#"><i class="bi bi-plus-lg"></i>New Room</a></li>
+      </ul>
+      </li>
+     
+      <li><a routerLink="/rezervations"><i class="bi bi-journal-check"></i>Reservations</a></li>
+      <li><a routerLink="/users"><i class="bi bi-people"></i>Users</a></li>
+      <li><a href="#"><i class="bi bi-box-arrow-in-right"></i>LogOut</a></li>
+  
+    </ul>
+  </div>
+  <!-- left side bar-->
+  
+  <!-- main content-->
+  
+  <div class="main-content" [ngStyle]="responsiveContent">  
+  
+  <router-outlet ></router-outlet>    
+  
+  </div>
+  <!-- main content-->
